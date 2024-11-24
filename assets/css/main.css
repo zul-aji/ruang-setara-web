@@ -503,7 +503,7 @@ body.loaded {
 	font-size: 20px;
 	font-weight: 200;
 	letter-spacing: 15px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	z-index: 20;
 }
 
@@ -1803,6 +1803,12 @@ body.loaded {
 .resume-widget .resume-item .resume-title {
 	font-size: 25px;
 	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.resume-title-location{
+	font-size: 25px;
+	
 	margin-bottom: 8px;
 }
 /* END: Resume Section */
