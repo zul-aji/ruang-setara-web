@@ -928,6 +928,8 @@ body.loaded {
   transition-delay: 200ms;
 }
 
+
+
 /* Modal Overlay */
 .modal-join-us {
   position: fixed;
@@ -944,6 +946,7 @@ body.loaded {
 
 /* Modal Content */
 .modal-join-us-content {
+  position: relative; /* So the close button is positioned relative to this */
   background: black;
   border: 5px solid #8750f7; /* Purple border */
   border-radius: 8px;
@@ -962,6 +965,22 @@ body.loaded {
 .modal-join-us.hidden {
   display: none; /* Completely hide the modal */
 }
+
+/* Close button (X) */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: purple; /* Purple color for the X */
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000; /* Optional hover color */
+}
+
 
 
 /* END: Headers */
