@@ -31,6 +31,38 @@ Description: Gerold - Personal Portfolio HTML5 Template
 
 ****************************************************/
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all buttons and modals
+    const buttons = document.querySelectorAll('[id^="joinUsBtn"]');
+    const modals = document.querySelectorAll('[id^="joinUsModal"]');
+    const closeButtons = document.querySelectorAll('[id^="closeModal"]');
+
+    // Add event listeners for each button
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            modals[index].classList.remove("hidden"); // Show corresponding modal
+        });
+    });
+
+    // Add event listeners for each close button
+    closeButtons.forEach((closeButton, index) => {
+        closeButton.addEventListener("click", () => {
+            modals[index].classList.add("hidden"); // Hide corresponding modal
+        });
+    });
+
+    // Close modal when clicking outside of the modal content
+    modals.forEach((modal, index) => {
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.classList.add("hidden"); // Hide modal
+            }
+        });
+    });
+});
+
+
+
 (function ($) {
 	"use strict";
 
@@ -71,7 +103,6 @@ Description: Gerold - Personal Portfolio HTML5 Template
 
 		lastScrollTop = scroll;
 	});
-		
 
 		/*------------------------------------------------------
   	/  Hamburger Menu
